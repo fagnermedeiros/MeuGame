@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.game-board{    
+    filter: saturate(2);   
+    width: 100%;
+    height: 500px;
+    border: 1px solid #333;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(aqua, white);
+    border-bottom: 13px solid green;
+}
+#startButton{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    background: greenyellow;
+}
+#resetButton{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    background: greenyellow;
+}
+.cloud{
+    position: absolute;
+    width: 300px;
+    animation: cloud-animation 6s infinite linear;
+}
+.dino{   
+    position: absolute;
+    width: 200px;
+    bottom: 0;       
+    animation: dino-animation 1.5s infinite linear; 
+}
+.fagner{   
+    position: absolute;
+    width: 150px;
+    bottom: -80px;   
+}
+.jump{
+    animation: jump 500ms ease-out;
+}
+@keyframes dino-animation{
+    from{
+        right: -200px;
+    }
+    to{
+        right: 100%;
+    }
+}
+@keyframes jump{
+    0%{
+        bottom: 0;
+    }
+    30%{
+        bottom: 100px;
+    }
+    40%{
+        bottom: 100px;
+    }
+    50%{
+        bottom: 100px;
+    }
+    60%{
+        bottom: 100px;
+    }
+    70%{
+        bottom: 100px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+@keyframes cloud-animation{
+    from{
+        right: -300px;
+    }
+    to{
+        right: 100%;
+    }
+}
